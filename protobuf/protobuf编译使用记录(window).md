@@ -6,13 +6,13 @@
 
 Releases[下载地址](https://github.com/protocolbuffers/protobuf/releases)，选择cpp版本下载。
 
-![alt text](/tutorial/下载.png)
+![alt text](/protobuf/tutorial/下载.png)
 
 ### CMake下载
 
 CMake [下载地址](https://cmake.org/download/)，选择window x64 install版本下载。
 
-![alt text](/tutorial/cmake下载.png){:height="75%" width="75%"}
+![alt text](/protobuf/tutorial/cmake下载.png){:height="75%" width="75%"}
 
 ### CMake编译
 
@@ -20,15 +20,15 @@ CMake [下载地址](https://cmake.org/download/)，选择window x64 install版本下载。
 
 取消勾选 BUILD_TEST，依次点击 Configure，Generate，Open Project。
 
-![alt text](/tutorial/Cmake编译.png){:height="75%" width="75%"}
+![alt text](/protobuf/tutorial/Cmake编译.png){:height="75%" width="75%"}
 
 进入Visual Studio后，使用 x64 Debug 生成，等待一段时间~
 
-![alt text](/tutorial/Debug.png){:height="75%" width="75%"}
+![alt text](/protobuf/tutorial/Debug.png){:height="75%" width="75%"}
 
 生成完毕后进入工程下 Debug 文件夹，主要用到以下三个文件：
 
-![alt text](/tutorial/VS生成.png){:height="75%" width="75%"}
+![alt text](/protobuf/tutorial/VS生成.png){:height="75%" width="75%"}
 
 ## protobuf使用
 
@@ -102,22 +102,22 @@ int main()
 
 包含 protobuf 头文件，在附加包含目录中配置 protobuf 下载目录下的src文件夹。
 
-![alt text](/tutorial/include.png){:height="75%" width="75%"}
+![alt text](/protobuf/tutorial/include.png){:height="75%" width="75%"}
 
 附加库目录包含 Visual Studio 生成的Debug文件夹。
 
-![alt text](/tutorial/lib目录.png){:height="75%" width="75%"}
+![alt text](/protobuf/tutorial/lib目录.png){:height="75%" width="75%"}
 
 引用Debug目录下 **libprotobufd.lib**, **libprotocd.lib** 静态库文件。
 
-![alt text](/tutorial/lib文件.png){:height="75%" width="75%"}
+![alt text](/protobuf/tutorial/lib文件.png){:height="75%" width="75%"}
 
 因为之前生成解决方案时使用的是 **Debug** 生成方式而非 **Release** 生成方式，故这里的静态库文件后缀带 'd'，相应的在**代码生成**的**运行库**选项中选择 **/MTD**，意为使用**静态调试库**，若使用 Release 生成方式则选择 **/MT** 选项。
 
-![alt text](/tutorial/运行库选项.png){:height="75%" width="75%"}
+![alt text](/protobuf/tutorial/运行库选项.png){:height="75%" width="75%"}
 
 ### 运行
 
 之后再使用 Visual Studio 生成运行后可得到相应输出。
 
-![alt text](/tutorial/输出.png){:height="75%" width="75%"}
+![alt text](/protobuf/tutorial/输出.png){:height="75%" width="75%"}
