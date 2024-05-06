@@ -1,8 +1,8 @@
 # Patterns and Hints for Concurrency in Go
 
-1. Use the race detector,for development and even production. 
+1. Use the race detector,for development and even production.
    1. 在开发生产环境中使用竞争检测器
-2. Convert data state into code state when it makes programs clearer. 
+2. Convert data state into code state when it makes programs clearer.
    1. 在能简化程序理解的前提下，同一个程序的代码实现，可以考虑**将数据状态转变成代码状态**
 3. Convert mutexes into goroutines when it makes programs clearer.
    1. 在能简化程序理解的前提下，可以使用 goroutine 替代互斥量。
