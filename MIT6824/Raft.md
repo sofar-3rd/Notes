@@ -195,3 +195,4 @@ follower 节点在接收到 leader 的 replicate entry（日志复制） 消息后，会在将 logEn
 
 * 收到冲突响应后，领导者应首先在其日志中搜索 `XIndex` 索引的日志条目是否为 `XTerm`。如果匹配，则设置 `nextIndex[peer]` = `XIndex` + 1 和 `matchIndex[peer]` = `XIndex`。（**更好的做法是设置为 `XTerm` 中最后一条日志的 `index` + 1**）
 * 如果不匹配，则证明 leader 不含有 `XTerm` 的日志条目，则设置 `nextIndex[peer]` = `XIndex`。
+
